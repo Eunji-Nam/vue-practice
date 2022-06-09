@@ -1,10 +1,8 @@
 <template>
-  <h1>Hello {{ animal }}</h1>
-  <h2>원숭이는 {{ food }}를 좋아합니다.</h2>
-  <input type="text" v-model="food" />
-  <a :href="food">{{food}}</a>
-  <hr />
-  <h2 v-bind:class="{ red : food==='apple' , 'not-good' : food==='rice' }">원숭이는 {{food}}를 좋아합니다. </h2>
+<div>
+  <h2 v-if="display"> (if)보입니다!! </h2>
+  <h2 v-show="display"> (show)보입니다!! </h2>
+</div>
 </template>
 
 <script>
@@ -12,14 +10,11 @@ export default {
   name: 'App',
   data() { 
     return {
-      // key: "value",
-      animal: "Monkey",
-      food: "apple",
-      imageSource: "https://placeimg.com/100/100/any",
-      naverUrl: "https://www.naver.com"
-    }
+      age: 10,
+      display: false
+    };
   }
-}
+};
 </script>
 
 <style>
